@@ -1,0 +1,17 @@
+shared: &shared
+  adapter: mysql
+  username: root
+  socket: /var/run/mysqld/mysqld.sock
+  encoding: utf8
+
+development:
+  <<: *shared
+  database: ee_devel
+
+test:
+  <<: *shared
+  database: ee_test
+
+production:
+  <<: *shared
+  database: ee_test
